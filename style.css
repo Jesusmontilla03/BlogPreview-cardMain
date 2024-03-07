@@ -74,4 +74,7 @@ body {
         padding: 0 48px;
         box-sizing: border-box;
     }
+    .attribution {
+        padding: 0 42px 24px 42px;
+    }
 }
