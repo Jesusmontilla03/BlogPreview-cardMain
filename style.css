@@ -1,80 +1,97 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Figtree-Italic';
+    src: url(/assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
 :root {
     --Yellow: hsl(47, 88%, 63%);
     --White: hsl(0, 0%, 100%);
     --Grey: hsl(0, 0%, 50%);
     --Black: hsl(0, 0%, 7%);
 }
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    font-family: "Figtree", sans-serif;
+    box-sizing: border-box;
     background-color: var(--Yellow);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-.main-container {
-    width: 340px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Figtree';
+    width: 100%;
     height: 100vh;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .container {
-    width: 100%;
+    width: 370px;
+    height: auto;
     background-color: var(--White);
     padding: 24px;
     border-radius: 20px;
-    border: 1px solid;
-    box-shadow: 8px 8px;
+    border: 1px solid var(--Black);
+    box-shadow: 8px 8px var(--Black);
+    margin-bottom: 48px;
 }
-.illust-img img {
+.container .illust-img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: inherit;
+    margin-bottom: 24px;
 }
-.container h4 {
-    display: inline-block;
+.container span {
     background-color: var(--Yellow);
-    padding: 5px 16px;
-    margin-bottom: 0;
-    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: 800;
 }
 .container p:nth-child(3) {
-    font-weight: bolder;
-    font-size: 14px;
-    color: var(--Black);
+    font-weight: 500;
+    margin: 24px 0;
 }
-.container h2 {
-    font-weight: bold;
+.container h3 a {
+    color: var(--Black);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.03em;
+}
+.container h3 a:hover {
+    color: var(--Yellow);
 }
 .container p:nth-child(5) {
     color: var(--Grey);
 }
-.autor {
+.container .avatar {
     display: flex;
     align-items: center;
 }
-.autor img {
+.container .avatar img {
     width: 40px;
+    margin-right: 12px;
 }
-.autor p {
-    margin-left: 12px;
-    font-weight: bold;
-    font-size: 18px;
+.container .avatar p {
+    font-weight: 800;
 }
 .attribution a {
     color: var(--Grey);
 }
 @media (max-width: 375px) {
-    .main-container {
+    body {
         width: 100%;
-        padding: 0 48px;
-        box-sizing: border-box;
+        padding: 0 24px;
     }
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
     .attribution {
-        padding: 0 42px 24px 42px;
+        padding: 0 24px;
+        position: absolute;
+        bottom: 24px;
     }
 }
